@@ -42,7 +42,7 @@ to `'/products.json'`
 ### src/test/java:
 TestNG Runner file
 ### Reports
--   Test Reports are kept here. Path : Reports/SparkReport 26-Apr-21 10-47-42/Output/Spark.html
+-   Test Reports and screenshots are kept here
 
 
 ### Test Details:
@@ -55,11 +55,11 @@ As given in the assignment, 3 testcases along with 1 negative testcase has been 
 -   Verify - It should be possible to change quantities and remove items on the cart page.
 -   Negative testcase- Verifying Invalid quantity in the checkout  page
 
-### Report:
-Report can be found at - /eCommerce/Reports/SparkReport 26-Apr-21 10-47-42/Output/Spark.html
-I have also  attached the report in the mail for easy access.
 
 ### How to read the report:
+Report can be found at - https://github.com/SwathiShettyJ/ecommerce/tree/main/com.ecommerce/Reports/SparkReport%2026-Apr-21%2010-47-42/Output/Spark.html
+(I have also  attached the report in the mail for easy access).
+
 -   Download the folder : SparkReport 26-Apr-21 10-47-42
 -   Open the Spark.html file inside Output folder with any browser
 (Right click on Spark.html, open with any browser Eg:Chrome)
