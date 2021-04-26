@@ -17,6 +17,11 @@ import com.automation.utilities.WaitUtil;
 
 
 
+/** Page elements and functions of HomePage
+ * @author swathishetty
+ *
+ */
+
 public class HomePage extends BasePage {
 	@FindBy(how = LINK_TEXT, using = "Shop now")
 	private WebElement shopNow;
@@ -49,6 +54,9 @@ public class HomePage extends BasePage {
 	
 	static Logger logger = Logger.getLogger(HomePage.class);
 
+	/**
+	 * Verifies HomePage webelements
+	 */
 	public void verifyHomePage() {
 		WaitUtil.pageLoad();
 		assert(shopNow.isDisplayed());
@@ -58,6 +66,9 @@ public class HomePage extends BasePage {
 		}
 	}
 
+	/**
+	 * Verifies Selects table dropdown from Products category
+	 */
 	public void selectTable() {
 		products.click();
 		tables.click();
@@ -65,6 +76,9 @@ public class HomePage extends BasePage {
 		WaitUtil.visibilityOf(tablesDetail);
 	}
 	
+	/**
+	 * Adds items to cart
+	 */
 	public void addToCart() throws CustomException {
 		try {
 			clickAddToCart().navigateToCheckout();
@@ -89,6 +103,9 @@ public class HomePage extends BasePage {
 		return this;
 	}
 	
+	/**
+	 * Navigates to checkout page
+	 */
 	private HomePage navigateToCheckout() {
 		WaitUtil.pageLoad();
 		WaitUtil.pageLoad();

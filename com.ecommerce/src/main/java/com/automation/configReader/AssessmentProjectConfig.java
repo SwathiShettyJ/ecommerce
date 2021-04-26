@@ -5,6 +5,10 @@ import org.aeonbits.owner.Config.DefaultValue;
 import org.aeonbits.owner.Config.Key;
 import org.aeonbits.owner.Config.Sources;
 
+/** Config file Reader
+ * @author swathishetty
+ *
+ */
 @Sources({ "classpath:config/assessmentProject.properties" })
 public interface AssessmentProjectConfig extends Config {
 

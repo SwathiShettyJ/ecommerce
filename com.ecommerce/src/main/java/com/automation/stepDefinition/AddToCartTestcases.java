@@ -1,6 +1,5 @@
 package com.automation.stepDefinition;
 
-
 import java.io.File;
 import java.io.IOException;
 import org.apache.commons.io.FileUtils;
@@ -24,6 +23,12 @@ import io.cucumber.java.Scenario;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 
+/**** Step Definition class corresponding to AddToCart Testcases***/
+
+/**
+ * @author swathishetty
+ *
+ */
 public class AddToCartTestcases {
 
 	public WebDriver driver;
