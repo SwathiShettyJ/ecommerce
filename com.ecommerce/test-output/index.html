@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button class="button" id="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -40,7 +40,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Default_suite">
-              <span class="suite-name border-passed">Default suite</span>
+              <span class="suite-name border-failed">Default suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -93,7 +93,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">3 methods, 1 failed,   2 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Default_suite" class="hide-methods failed suite-Default_suite"> (hide)</a> <!-- hide-methods failed suite-Default_suite -->
+                      <a href="#" panel-name="suite-Default_suite" class="show-methods failed suite-Default_suite"> (show)</a> <!-- show-methods failed suite-Default_suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Default_suite">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="Runners.TestNGRunner" hash-for-method="runScenario(&quot;Negative Testcase : Invalid quantity&quot;, &quot;Optional[Shopping cart Testcases]&quot;)">runScenario("Negative Testcase : Invalid quantity", "Optional[Shopping cart Testcases]")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Default_suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -104,12 +118,12 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="Runners.TestNGRunner" hash-for-method="runScenario(&quot;Add a duplicate item to the cart should instead increment the quantity and change quantity in cart&quot;...)">runScenario("Add a duplicate item to the cart should instead increment the quantity and change quantity in cart"...)</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="Runners.TestNGRunner" hash-for-method="runScenario(&quot;Verify if user is able to add item to Cart successfully&quot;, &quot;Optional[Shopping cart Testcases]&quot;)">runScenario("Verify if user is able to add item to Cart successfully", "Optional[Shopping cart Testcases]")</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="Runners.TestNGRunner" hash-for-method="runScenario(&quot;A user should be able to add item to Cart&quot;, &quot;Optional[Shopping cart Testcases]&quot;)">runScenario("A user should be able to add item to Cart", "Optional[Shopping cart Testcases]")</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="Runners.TestNGRunner" hash-for-method="runScenario(&quot;1.Adding a duplicate item to the cart should increment the quantity and 2. Change quantity in cart ...)">runScenario("1.Adding a duplicate item to the cart should increment the quantity and 2. Change quantity in cart ...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -124,6 +138,30 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Default_suite" class="panel Default_suite">
+          <div class="suite-Default_suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">Runners.TestNGRunner</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Negative Testcase : Invalid quantity&quot;, &quot;Optional[Shopping cart Testcases]&quot;)">
+                  </a> <!-- runScenario("Negative Testcase : Invalid quantity", "Optional[Shopping cart Testcases]") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Negative Testcase : Invalid quantity", "Optional[Shopping cart Testcases]")</span>
+                  <div class="stack-trace">java.lang.AssertionError
+	at com.automation.pages.CheckOutPage.verifyItemAdded(CheckOutPage.java:36)
+	at com.automation.stepDefinition.AddToCartTestcases.verifyOneItemAdded(AddToCartTestcases.java:64)
+	at ✽.verify quantity 2 in checkout page(file:///Users/swathishetty/Documents/Swathi/Assignment/ecommerce/com.ecommerce/src/test/resources/features/AddToCart.feature:26)
+
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Default_suite-class-failed -->
           <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -132,20 +170,20 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="runScenario(&quot;Add a duplicate item to the cart should instead increment the quantity and change quantity in cart&quot;...)">
-                  </a> <!-- runScenario("Add a duplicate item to the cart should instead increment the quantity and change quantity in cart"...) -->
+                  <a name="runScenario(&quot;Verify if user is able to add item to Cart successfully&quot;, &quot;Optional[Shopping cart Testcases]&quot;)">
+                  </a> <!-- runScenario("Verify if user is able to add item to Cart successfully", "Optional[Shopping cart Testcases]") -->
                   <span class="method-name">runScenario</span>
-                  <span class="parameters">("Add a duplicate item to the cart should instead increment the quantity and change quantity in cart", "Optional[Shopping cart Testcases]")</span>
+                  <span class="parameters">("Verify if user is able to add item to Cart successfully", "Optional[Shopping cart Testcases]")</span>
                   <em>
 (Runs Cucumber Scenarios)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="runScenario(&quot;A user should be able to add item to Cart&quot;, &quot;Optional[Shopping cart Testcases]&quot;)">
-                  </a> <!-- runScenario("A user should be able to add item to Cart", "Optional[Shopping cart Testcases]") -->
+                  <a name="runScenario(&quot;1.Adding a duplicate item to the cart should increment the quantity and 2. Change quantity in cart ...)">
+                  </a> <!-- runScenario("1.Adding a duplicate item to the cart should increment the quantity and 2. Change quantity in cart ...) -->
                   <span class="method-name">runScenario</span>
-                  <span class="parameters">("A user should be able to add item to Cart", "Optional[Shopping cart Testcases]")</span>
+                  <span class="parameters">("1.Adding a duplicate item to the cart should increment the quantity and 2. Change quantity in cart and verify", "Optional[Shopping cart Testcases]")</span>
                   <em>
 (Runs Cucumber Scenarios)                  </em>
                 </div> <!-- method-content -->
@@ -155,7 +193,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">/private/var/folders/2h/xjqf3zpj6tb_np20m3jkwhkh0000gn/T/testng-eclipse--859258778/testng-customsuite.xml</span>
+            <span class="header-content">/private/var/folders/2h/xjqf3zpj6tb_np20m3jkwhkh0000gn/T/testng-eclipse--170134472/testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -212,20 +250,24 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(3);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'runScenario')
 data.setCell(0, 2, 'Runners.TestNGRunner')
-data.setCell(0, 3, 17050);
+data.setCell(0, 3, 15939);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'runScenario')
 data.setCell(1, 2, 'Runners.TestNGRunner')
-data.setCell(1, 3, 16897);
+data.setCell(1, 3, 14626);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'runScenario')
+data.setCell(2, 2, 'Runners.TestNGRunner')
+data.setCell(2, 3, 12661);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 33 seconds</span>
+              <span class="suite-total-time">Total running time: 43 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -257,16 +299,22 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <span class="method-name">runScenario("A user should be able to add item to Cart", "Optional[Shopping cart Testcases]")</span>
-                <span class="method-start">543 ms</span>
+                <span class="method-name">runScenario("Verify if user is able to add item to Cart successfully", "Optional[Shopping cart Testcases]")</span>
+                <span class="method-start">498 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">runScenario("Add a duplicate item to the cart should instead increment the quantity and change quantity in cart"...)</span>
-                <span class="method-start">17446 ms</span>
+                <span class="method-name">runScenario("1.Adding a duplicate item to the cart should increment the quantity and 2. Change quantity in cart ...)</span>
+                <span class="method-start">15127 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">runScenario("Negative Testcase : Invalid quantity", "Optional[Shopping cart Testcases]")</span>
+                <span class="method-start">31067 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">34500 ms</span>
+                <span class="method-start">43730 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

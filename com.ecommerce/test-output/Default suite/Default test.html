@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>2/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>2/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Apr 26 00:09:32 AEST 2021</td>
+<td>Started on:</td><td>Mon Apr 26 10:47:41 AEST 2021</td>
 </tr>
-<tr><td>Total time:</td><td>34 seconds (34919 ms)</td>
+<tr><td>Total time:</td><td>44 seconds (44078 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,28 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='Runners.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: Runners.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Negative Testcase : Invalid quantity", "Optional[Shopping cart Testcases]"</td>
+<td><div><pre>java.lang.AssertionError
+	at com.automation.pages.CheckOutPage.verifyItemAdded(CheckOutPage.java:36)
+	at com.automation.stepDefinition.AddToCartTestcases.verifyOneItemAdded(AddToCartTestcases.java:64)
+	at ✽.verify quantity 2 in checkout page(file:///Users/swathishetty/Documents/Swathi/Assignment/ecommerce/com.ecommerce/src/test/resources/features/AddToCart.feature:26)
+</pre></div><a href='#' onClick='toggleBox("stack-trace959897458", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace959897458'><pre>java.lang.AssertionError
+	at com.automation.pages.CheckOutPage.verifyItemAdded(CheckOutPage.java:36)
+	at com.automation.stepDefinition.AddToCartTestcases.verifyOneItemAdded(AddToCartTestcases.java:64)
+	at ✽.verify quantity 2 in checkout page(file:///Users/swathishetty/Documents/Swathi/Assignment/ecommerce/com.ecommerce/src/test/resources/features/AddToCart.feature:26)
+</pre></div></td>
+<td>12</td>
+<td>Runners.TestNGRunner@59906517</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -75,14 +97,14 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='Runners.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: Runners.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "A user should be able to add item to Cart", "Optional[Shopping cart Testcases]"</td>
+<td title='Runners.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: Runners.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify if user is able to add item to Cart successfully", "Optional[Shopping cart Testcases]"</td>
 <td></td>
-<td>16</td>
+<td>14</td>
 <td>Runners.TestNGRunner@59906517</td></tr>
 <tr>
-<td title='Runners.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: Runners.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Add a duplicate item to the cart should instead increment the quantity and change quantity in cart", "Optional[Shopping cart Testcases]"</td>
+<td title='Runners.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: Runners.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "1.Adding a duplicate item to the cart should increment the quantity and 2. Change quantity in cart and verify", "Optional[Shopping cart Testcases]"</td>
 <td></td>
-<td>17</td>
+<td>15</td>
 <td>Runners.TestNGRunner@59906517</td></tr>
 </table><p>
 </body>

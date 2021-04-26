@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+<testng-results skipped="0" failed="1" ignored="0" total="3" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="34919" started-at="2021-04-26T00:09:32 AEST" finished-at="2021-04-26T00:10:07 AEST">
+  <suite name="Default suite" duration-ms="44078" started-at="2021-04-26T10:47:41 AEST" finished-at="2021-04-26T10:48:25 AEST">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.TestNGRunner@59906517]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test name="Default test" duration-ms="34919" started-at="2021-04-26T00:09:32 AEST" finished-at="2021-04-26T00:10:07 AEST">
+    <test name="Default test" duration-ms="44078" started-at="2021-04-26T10:47:41 AEST" finished-at="2021-04-26T10:48:25 AEST">
       <class name="Runners.TestNGRunner">
-        <test-method status="PASS" signature="setUpClass()[pri:0, instance:Runners.TestNGRunner@59906517]" name="setUpClass" is-config="true" duration-ms="532" started-at="2021-04-26T00:09:32 AEST" finished-at="2021-04-26T00:09:33 AEST">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:Runners.TestNGRunner@59906517]" name="setUpClass" is-config="true" duration-ms="488" started-at="2021-04-26T10:47:41 AEST" finished-at="2021-04-26T10:47:42 AEST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.TestNGRunner@59906517]" name="runScenario" duration-ms="16897" started-at="2021-04-26T00:09:33 AEST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-04-26T00:09:50 AEST">
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.TestNGRunner@59906517]" name="runScenario" duration-ms="14626" started-at="2021-04-26T10:47:42 AEST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-04-26T10:47:57 AEST">
           <params>
             <param index="0">
               <value>
-                <![CDATA["A user should be able to add item to Cart"]]>
+                <![CDATA["Verify if user is able to add item to Cart successfully"]]>
               </value>
             </param>
             <param index="1">
@@ -30,11 +30,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.TestNGRunner@59906517]" name="runScenario" duration-ms="17050" started-at="2021-04-26T00:09:50 AEST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-04-26T00:10:07 AEST">
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.TestNGRunner@59906517]" name="runScenario" duration-ms="15939" started-at="2021-04-26T10:47:57 AEST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-04-26T10:48:12 AEST">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Add a duplicate item to the cart should instead increment the quantity and change quantity in cart"]]>
+                <![CDATA["1.Adding a duplicate item to the cart should increment the quantity and 2. Change quantity in cart and verify"]]>
               </value>
             </param>
             <param index="1">
@@ -46,7 +46,32 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:Runners.TestNGRunner@59906517]" name="tearDownClass" is-config="true" duration-ms="400" started-at="2021-04-26T00:10:07 AEST" finished-at="2021-04-26T00:10:07 AEST">
+        <test-method status="FAIL" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.TestNGRunner@59906517]" name="runScenario" duration-ms="12661" started-at="2021-04-26T10:48:12 AEST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-04-26T10:48:25 AEST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Negative Testcase : Invalid quantity"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Shopping cart Testcases]"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError
+at com.automation.pages.CheckOutPage.verifyItemAdded(CheckOutPage.java:36)
+at com.automation.stepDefinition.AddToCartTestcases.verifyOneItemAdded(AddToCartTestcases.java:64)
+at ✽.verify quantity 2 in checkout page(file:///Users/swathishetty/Documents/Swathi/Assignment/ecommerce/com.ecommerce/src/test/resources/features/AddToCart.feature:26)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:Runners.TestNGRunner@59906517]" name="tearDownClass" is-config="true" duration-ms="331" started-at="2021-04-26T10:48:25 AEST" finished-at="2021-04-26T10:48:25 AEST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
