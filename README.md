@@ -4,18 +4,8 @@
 
 ### Details of Automation:
 
-The UI picked for automation is similar to the requirement mentioned for Storefront Single-Page App assignment.
 
 ### Assignment Details
-
-Using React\*, create a single-page app which renders a mock storefront that
-matches the provided screenshots, using the supplied JSON and media files. The
-`products.json` file should be accessed asynchronously by making a GET request
-to `'/products.json'`
-
--   The storefront consists of three main screens: a category list page, a
-    product details page, and a cart page (plus cart popup). More details are
-    provided below.
 -   Clicking the Add to Cart button on a product tile or on the product detail
     page should add the item to the cart dynamically.
 -   Attempting to add a duplicate item to the cart should instead increment the
